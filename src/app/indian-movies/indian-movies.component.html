@@ -1,20 +1,46 @@
-<div class="container">
 
-    <table *ngFor="let item of indianMovies" class="table table-striped">
-            <tr>
-                <th> Name </th>
-                <th> year </th>
-                <th>Quality</th>
-                <th>Link to trailer</th>
-            </tr>
-        
-            <tr >
-                <td> {{ item.name }} </td>
-                <td> {{ item.year }} </td>
-                <td>{{ item.quality }} </td>
-                <td><a href={{item.trailerLink}} >Trailer Link</a> </td>
-            </tr>
-            
-
-    </table>
+<h1 class="">Indian Movies</h1> 
+<div class="container my-4 d-flex flex-wrap" >
+    
+<div class="card d-inline-block mx-lg-2 my-2" style="width: 18rem;" *ngFor="let item of indianMovies">
+    <img src="{{item.img}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ item.name }}</h5>
+      
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{ item.year }}</li>
+      <li class="list-group-item">{{ item.quality }}</li>
+    </ul>
+    <div class="card-body">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Watch Trailer
+          </button>
+      <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="ratio ratio-4x3">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=t8tMTjBMPWs" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
 </div>
+
+
+
+
+  
