@@ -1,0 +1,20 @@
+<div class="container">
+
+    <table *ngFor="let item of indianMovies" class="table table-striped">
+            <tr>
+                <th> Name </th>
+                <th> year </th>
+                <th>Quality</th>
+                <th>Link to trailer</th>
+            </tr>
+        
+            <tr >
+                <td> {{ item.name }} </td>
+                <td> {{ item.year }} </td>
+                <td>{{ item.quality }} </td>
+                <td><a href={{item.trailerLink}} >Trailer Link</a> </td>
+            </tr>
+            
+
+    </table>
+</div>
