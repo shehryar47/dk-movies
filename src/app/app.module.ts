@@ -8,6 +8,7 @@ import { BodyComponent } from './body/body.component';
 import { IndianMoviesComponent } from './indian-movies/indian-movies.component';
 import { EnglishMoviesComponent } from './english-movies/english-movies.component';
 import { AnimatedMoviesComponent } from './animated-movies/animated-movies.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AnimatedMoviesComponent } from './animated-movies/animated-movies.compo
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule
   ],
